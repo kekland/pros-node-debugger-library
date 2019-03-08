@@ -1,9 +1,8 @@
 #include "main.h"
-#include "debugger.hpp"
 
 using namespace debugger;
 
-MotorDebugger::MotorDebugger(std::string iid, okapi::Motor imotor)
+debugger::MotorDebugger::MotorDebugger(std::string iid, okapi::Motor imotor)
 {
   printf("MotorDebugger::MotorDebugger");
   id = iid;
@@ -11,7 +10,7 @@ MotorDebugger::MotorDebugger(std::string iid, okapi::Motor imotor)
   printf("MotorDebugger::MotorDebugger end");
 };
 
-std::string MotorDebugger::generateLog()
+std::string debugger::MotorDebugger::generateLog()
 {
   std::string data = "{\"type\": \"motor\", \"id\": \"";
   data += id;
